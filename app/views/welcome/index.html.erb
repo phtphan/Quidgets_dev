@@ -1,0 +1,9 @@
+Hi there! Please login...
+
+<%= checkbox(:id => "my_checkbox", :record => current_user,:field => "active") %>
+
+<%= radio(:name => "payment_method_options", :parent => @current_user, :option => PaymentMethod.find(1)) %> <%= PaymentMethod.find(1).name %> <br/>
+<%= radio(:name => "payment_method_options", :parent => @current_user, :option => PaymentMethod.find(2)) %> <%= PaymentMethod.find(2).name %> <br/>
+
+<br/>
+
