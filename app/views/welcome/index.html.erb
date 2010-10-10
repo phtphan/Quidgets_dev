@@ -1,9 +1,9 @@
 Hi there! Please login...<br/>
 
-<%= checkbox(:id => "my_checkbox", :record => User.find(1),:field => "active") %> <%= User.find(1).username %><br/>
+<%= checkbox(User.find(1),"active") %> <%= textbox(User.find(1),"username") %><br/>
 
-<%= radio(:name => "payment_method_options", :record => Order.find(1), :option => PaymentMethod.find(1)) %> <%= PaymentMethod.find(1).name %> <br/>
-<%= radio(:name => "payment_method_options", :record => Order.find(1), :option => PaymentMethod.find(2)) %> <%= PaymentMethod.find(2).name %> <br/>
+<%= radio(Order.find(1), PaymentMethod.find(1),  {:name => "payment_method_options"}) %> <%= PaymentMethod.find(1).name %> <br/>
+<%= radio(Order.find(1), PaymentMethod.find(2),  {:name => "payment_method_options"}) %> <%= PaymentMethod.find(2).name %> <br/>
 
 <br/>
 
