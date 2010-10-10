@@ -1,2 +1,0 @@
-class ControlPanelController < ApplicationController
-end

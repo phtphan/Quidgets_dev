@@ -1,9 +1,9 @@
-Hi there! Please login...
+Hi there! Please login...<br/>
 
-<%= checkbox(:id => "my_checkbox", :record => current_user,:field => "active") %>
+<%= checkbox(:id => "my_checkbox", :record => User.find(1),:field => "active") %> <%= User.find(1).username %><br/>
 
-<%= radio(:name => "payment_method_options", :parent => @current_user, :option => PaymentMethod.find(1)) %> <%= PaymentMethod.find(1).name %> <br/>
-<%= radio(:name => "payment_method_options", :parent => @current_user, :option => PaymentMethod.find(2)) %> <%= PaymentMethod.find(2).name %> <br/>
+<%= radio(:name => "payment_method_options", :record => Order.find(1), :option => PaymentMethod.find(1)) %> <%= PaymentMethod.find(1).name %> <br/>
+<%= radio(:name => "payment_method_options", :record => Order.find(1), :option => PaymentMethod.find(2)) %> <%= PaymentMethod.find(2).name %> <br/>
 
 <br/>
 

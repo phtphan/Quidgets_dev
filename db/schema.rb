@@ -9,15 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100303051459) do
+ActiveRecord::Schema.define(:version => 20101009231327) do
 
-  create_table "process_modules", :force => true do |t|
+  create_table "orders", :force => true do |t|
+    t.float    "total"
+    t.integer  "user_id"
+    t.integer  "payment_method_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payment_methods", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
+    t.boolean  "active",        :default => true
     t.string   "username"
     t.string   "email"
     t.string   "password_hash"
